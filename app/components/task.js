@@ -6,6 +6,7 @@ import back from "../../public/images_icons/chevron-down.png";
 import warn from "../../public/images_icons/infocircle.png";
 import React, { useState } from 'react';
 import styles from '../styles/CircularProgressBar.module.css';
+import toast from "react-hot-toast";
 
 export default function Task() {
   const [selectedImages, setSelectedImages] = useState([]);
@@ -43,9 +44,13 @@ export default function Task() {
 
   const calculateProgress = () => {
     const totalCheckboxes = 2; // Number of checkboxes
-    const progress = (checkedCheckboxes.length / totalCheckboxes) * 125; // 440 is the circumference of the circle (2 * π * radius)
-    return 125 - progress; // Invert the progress for clockwise animation
-  };
+    const progress = (checkedCheckboxes.length / totalCheckboxes) * 125; 
+    if(progress == 125){
+      toast.success('tasks completed!');
+    }
+    return 125 - progress;
+  }; 
+ 
 
   const handleCheckboxChange = (checkboxId) => {
     setCheckedCheckboxes((prevChecked) => {
@@ -56,6 +61,10 @@ export default function Task() {
       }
     });
   };
+
+
+ 
+   
 
 
   return (
@@ -166,7 +175,7 @@ export default function Task() {
                 <div className={taskStyle.task}>
 
 
-                  <div className={taskStyle.task_sub}>
+                  <div className={`${taskStyle.task_sub} border-red-700`}>
                     <p className={taskStyle.task_task}>
                       <span>
                         @Elijah B.
