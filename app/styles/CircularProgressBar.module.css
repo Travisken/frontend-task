@@ -1,0 +1,48 @@
+/* styles/CircularProgressBar.module.css */
+
+.progressBarContainer {
+    width: 45px;
+    height: 45px;
+    /* background-color: #e0e0e0; */
+    margin-top: 10px;
+    position: relative;
+    scale: 0.8;
+  }
+  
+  .progressBar {
+    height: 100%;
+    width: 100%;
+    background-color: #e0e0e0;
+    transition: width 0.3s ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+  }
+  
+  .inner{
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+background-color: #ffffff;
+    /* border: 1px solid red; */
+  }
+
+  .circle{
+    fill: none;
+    stroke: #4caf50;
+    stroke-width: 5px;
+    stroke-dasharray: 125;
+    
+    /* stroke-dashoffset: 125; */
+    
+  }
+
+  .svg{
+    transform: rotate(-90deg);
+    position: absolute;
+top: 0;
+left: 0;
+
+
+}
