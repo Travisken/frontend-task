@@ -30,6 +30,7 @@ justify-content: center;
 border-radius: 8px;
 border: 1px solid #E8E8E8;
 gap: 8px;
+color: #7D849D;
 }
 
 .task_list{
@@ -246,7 +247,7 @@ gap: 8px;
 
 @media screen and (max-width: 800px) {
     .wrapper{
-        height: 130vh;
+        height: 120vh;
     }
 
     .task{

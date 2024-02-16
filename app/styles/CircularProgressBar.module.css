@@ -33,7 +33,7 @@ background-color: #ffffff;
     stroke: #4caf50;
     stroke-width: 5px;
     stroke-dasharray: 125;
-    
+    transition: all ease-in-out 300ms;
     /* stroke-dashoffset: 125; */
     
   }
