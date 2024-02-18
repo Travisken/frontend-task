@@ -257,4 +257,9 @@ color: #7D849D;
     .btn_display{
         display: none;
     }
+
+    .sub_wrap{
+      height: 80%;
+
+    }
 }
